@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .ct{
+            text-align: center;
+        }
+        .ct > div{
+            max-width: 800px;
+            box-sizing: border-box;
+            margin: 20px auto;
+            border-bottom: 1px solid #aaa;
+        }
+        .rc>div {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 20px;
+            padding: 20px;
+            vertical-align: middle;
+            line-height: 80px;
+            color: #fff;
+            background: #222;
+        }
+        .rc>div.raduis {
+            border-radius: 10px;
+        }
+        .rc>div.circle {
+            border-radius: 50%;
+        }
+
+        .shadow > .shadow-con{
+            margin: 0 auto;
+            margin-bottom: 20px; 
+            color: #fff;
+            line-height: 160px;
+            width: 300px;
+            height: 160px;
+            box-shadow: 8px 8px 12px #bbb;
+            background: #222;
+        }
+        .plane .plane-con{
+            margin: 0 auto;
+            margin-bottom: 20px; 
+            color: #fff;
+            line-height: 100px;
+            width: 200px;
+            height: 100px;
+            background: #222;
+            transition: all 2s;
+
+        }
+        .plane .plane-con:hover{
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            line-height: 180px;
+            transform: rotate(90deg) translate(0,-90px);
+        }
+        .three-con{
+            margin: 0 auto;
+            margin-bottom: 20px; 
+            width: 240px;
+            height: 150px;
+            border: 1px solid #222;
+            perspective: 200px;
+        }
+        .three-con .three-con-datil{
+            margin: 10px;
+            width: 220px;
+            height: 130px;
+            line-height: 130px;
+            color: #fff;
+            background: #222;
+            transition: all 2s;
+        }
+        .three-con .three-con-datil:hover{
+            transform: rotateX(30deg) rotateY(30deg) rotateZ(18deg);
+        }
+        .gradient .gradient-con{
+            height: 160px;
+            margin-bottom: 20px; 
+            background: linear-gradient(to right, rgba(0,0,0,0), rgba(192,251,246,1),rgba(158,187,246,1),rgba(0,0,0,0));
+        }
+        .animate .animate-con{
+            margin: 0 auto;
+            margin-bottom: 20px; 
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; 
+            line-height: 160px;
+            border: 28px solid #c2d7fa;
+            border-top-color: #2265d4;
+            animation: 2s round infinite;
+        }
+        @keyframes round{
+        0%  {
+         transform: rotate(0);
+        }
+
+      100% {
+        transform: rotate(360deg);
+       }
+     }
+        
+</style>
+
+<body>
+    <div class="ct">
+        <div class="rc">
+            <div class="raduis">圆角</div>
+            <div class="circle">圆形</div>
+        </div>
+        <div class="shadow">
+            <div class="shadow-con">阴影</div>
+        </div>
+        <div class="plane">
+            <div class="plane-con">2d变形旋转移动</div>
+        </div>
+        <div class="three">
+            <div class="three-con">
+                <div class="three-con-datil">3d变形旋转移动</div>
+            </div>
+        </div>
+        <div class="gradient">
+            <div class="gradient-con">渐变</div>
+        </div>
+        <div class="animate">
+            <div class="animate-con">动画</div>
+        </div>
+    </div>
+</body>
+
+</html>
